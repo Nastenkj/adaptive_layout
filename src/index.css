@@ -1,0 +1,664 @@
+@font-face {
+  font-family: 'Inter';
+  src: url(https://pictures.s3.yandex.net/frontend-developer/responsive/Inter-Regular.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(https://pictures.s3.yandex.net/frontend-developer/responsive/Inter-Bold.woff2);
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  margin: 0;
+}
+
+body {
+  background-color: #2A2C2F;
+  margin: 0;
+}
+
+.page {
+  margin: 0;
+}
+
+.content {
+  margin: 0;
+}
+
+.header {
+  background-color: #2A2C2F;
+}
+
+.header__logo {
+  margin-top: 28px;
+  margin-left: 48px;
+  display: flex;
+  margin-right: 48px;
+  justify-content: space-between;
+}
+
+.header_ru {
+  color: white;
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: 'Inter';
+  margin-right: 18px;
+}
+
+.header_en {
+  color: white;
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: 'Inter';
+  text-decoration: none;
+}
+
+.language {
+  display: flex;
+  align-items: end;
+}
+
+.lead {
+  margin-top: 14px;
+  margin-left: 105px;
+  margin-right: 191px;
+  text-align: center;
+}
+
+.lead_title {
+  color: white;
+  line-height: 100px;
+  font-size: 96px;
+  font-family: 'Inter';
+  font-weight: bold;
+  margin: 0 132px;
+}
+
+.lead_subtitle {
+  color: white;
+  line-height: 36px;
+  font-size: 30px;
+  font-weight: normal;
+  font-family: 'Inter';
+  margin: 32px auto 0;
+}
+
+.img_train {
+  background-image: url("./map.png");
+  margin-top: 64px;
+  width: 100%;
+  height: 615px;
+  background-size: cover; /* Растягиваем изображение на весь div */
+  background-position: center; /* Центрируем изображение */
+  background-repeat: no-repeat; /* Запрещаем повторение изображения */
+  position: relative; /* Делаем контейнер относительным для позиционирования дочерних элементов */
+}
+
+.lead_map {
+  position: absolute;
+  max-width: 95%; /* Максимальная ширина наложенного изображения */
+  max-height: 100%; /* Максимальная высота наложенного изображения */
+  top: 35%; /* Сдвигаем вниз на 35% от высоты контейнера */
+  left: 65%; /* Сдвигаем вправо на 65% от ширины контейнера */
+  transform: translate(-65%, -50%); /* Смещаем обратно на половину своей ширины и высоты */
+}
+
+.content_caption {
+  color: white;
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: normal;
+  font-family: 'Inter';
+  margin-top: 8px;
+  text-align: left;
+}
+
+.intro {
+  margin: 134px 442px 0 148px;
+}
+
+.intro_title {
+  color: white;
+  line-height: 58px;
+  font-size: 54px;
+  font-family: 'Inter';
+  font-weight: bold;
+}
+
+.intro_text {
+  color: white;
+  line-height: 163%;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Inter';
+  margin-top: 40px;
+}
+
+.intro_list {
+  margin-top: 33px;
+  color: white;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Inter';
+}
+
+.img_train {
+  position: relative;
+}
+
+.photo-grid {
+  margin-top: 92px;
+  margin-left: 48px;
+  margin-right: 48px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(284px, 1fr)); /* Автоматически подстраивает колонки */
+  gap: 16px 16px;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.photo-grid_img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Чтобы изображения сохраняли пропорции */
+}
+
+.places {
+  margin: 92px auto 0;
+  width: 77%;
+}
+
+.place {
+  height: auto;
+  display: inline-grid;
+  gap: 48px 32px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
+  grid-template-areas:
+  "title url"
+  "imge paragr"
+  "imge paragra"
+  "imge .";
+}
+
+.place_2 {
+  margin-top: 80px;
+}
+
+.title {
+  grid-area: title;
+}
+
+.url {
+  grid-area: url;
+  align-self: end;
+}
+
+.place_website {
+  color: #AAAAAA;
+  line-height: 12px;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: 'Inter';
+}
+
+.url_link {
+  margin-top: 12px;
+  color: #FFFFFF;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: 'Inter';
+  text-decoration: underline;
+}
+
+.url_link:hover {
+  filter: brightness(80%); /* Затемнение на 20% */
+}
+
+.imge {
+  grid-area: imge;
+  position: relative; /* Для позиционирования изображения */
+  width: 100%; /* Ширина равна ширине контейнера */
+  aspect-ratio: 1 / 1; /* Соотношение сторон 1:1 (квадрат) */
+  overflow: hidden; /* Обрезаем лишнее */
+}
+
+.paragr {
+  grid-area: paragr;
+  max-width: 100%; /* Текст не выходит за пределы контейнера */
+}
+
+.paragra {
+  grid-area: paragra;
+  max-width: 100%; /* Текст не выходит за пределы контейнера */
+}
+
+.place_title {
+  color: white;
+  line-height: 76px;
+  font-size: 72px;
+  font-weight: bold;
+  font-family: 'Inter';
+  align-self: end;
+}
+
+.place_img {
+  width: 100%; /* Занимает всю ширину ячейки */
+  height: 100%; /* Занимает всю высоту ячейки */
+  object-fit: cover; /* Сохраняет пропорции, обрезая лишнее */
+}
+
+.place_paragraph {
+  color: white;
+  line-height: 163%;
+  font-weight: normal;
+  font-family: 'Inter';
+  font-size: clamp(14px, 2vw, 18px); /* Минимум 14px, максимум 18px, адаптивно */
+}
+
+.paragraph_1 {
+  margin-top: 48px;
+}
+
+.paragraph_2 {
+  margin-top: 26px;
+}
+
+.cover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./cover-trains.jpg");
+  margin: 92px 48px 0;
+  display: flex;
+  height: 740px;
+  background-size: cover; /* Растягиваем изображение на весь div */
+  background-position: center; /* Центрируем изображение */
+  background-repeat: no-repeat; /* Запрещаем повторение изображения */
+  position: relative; /* Делаем контейнер относительным для позиционирования дочерних элементов */
+}
+
+.cover:hover {
+  filter: brightness(80%); /* Затемнение картинки */
+}
+
+.cover__title_all {
+  display: flex;
+  flex-direction: column; /* Элементы располагаются вертикально */
+  justify-content: center; /* Центрирование по вертикали */
+  align-items: center; /* Центрирование по горизонтали */
+  text-align: center;
+  color: white;
+  font-family: 'Inter';
+  z-index: 1;
+}
+
+.cover__title_all:hover {
+  color: white;
+}
+
+.cover__title {
+  line-height: 76px;
+  font-size: 72px;
+  font-weight: bold;
+  font-family: 'Inter';
+}
+
+.cover__subtitle {
+  margin: 32px 412px;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: 'Inter';
+}
+
+.footer {
+  margin-top: 92px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row; /* Элементы идут справа налево */
+  justify-content: space-between;
+}
+
+.footer_link {
+  margin-right: 20px;
+  color: white;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: 'Inter';
+  text-decoration: none;
+}
+
+.footer_link:hover {
+  filter: brightness(80%); /* Затемнение на 20% */
+}
+
+.footer__copyright {
+  margin-right: 50px;
+  display: flex;
+  color: white;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Inter';
+  justify-content: space-between;
+}
+
+
+@media all and (max-width: 1024px) {
+
+.header__logo {
+    margin: 28px 48px 0 48px;
+}
+
+.lead {
+  margin: 48px 48px 0 48px;
+}
+
+.lead_title {
+  margin: 0 auto;
+}
+
+.lead_subtitle {
+  margin: 32px auto 0;
+}
+
+.img_train {
+  margin-top: 56px;
+  height: 580px;
+}
+
+.intro {
+  margin: 92px 286px 0 48px;
+}
+
+.photo-grid {
+  grid-template-rows: repeat(4, 1fr);
+  width: 90%;
+  gap: 12px;
+}
+
+.places {
+  margin: 92px auto 0;
+  width: 90%;
+}
+
+.place {
+  min-height: 640px;
+}
+
+.cover {
+  margin: 92px 0 0;
+  height: 640px;
+}
+
+.cover__subtitle {
+  margin: 32px 332px 0;
+}
+
+.footer_link {
+  margin-right: 18px;
+  line-height: 18px;
+  font-size: 16px;
+}
+
+.footer__copyright {
+  margin-right: 48px;
+  line-height: 16px;
+  font-size: 14px;
+}
+}
+
+@media all and (max-width: 768px) {
+
+.header__logo {
+  margin: 28px 24px 0 24px;
+}
+
+.header_ru {
+  line-height: 28px;
+  font-size: 24px;
+  margin-right: 18px;
+}
+
+.header_en {
+  line-height: 28px;
+  font-size: 24px;
+}
+
+.lead {
+  margin: 48px 0 0 0;
+}
+
+.lead_title {
+  margin: 0 auto;
+  line-height: 80px;
+  font-size: 76px;
+}
+
+.lead_subtitle {
+  margin: 32px 64px 0;
+}
+
+.img_train {
+  height: 480px;
+}
+
+.intro {
+  margin: 88px 24px 0;
+}
+
+.photo-grid {
+  margin: 88px 24px 0;
+}
+
+.places {
+  margin: 88px auto 0;
+  width: 94%;
+}
+
+.place {
+  min-height: min-content;
+}
+
+.place_2 {
+  margin-top: 73px;
+}
+
+.place_title {
+  line-height: 46px;
+  font-size: 42px;
+}
+
+.place_paragraph {
+  font-size: 16px;
+}
+
+.cover {
+  height: 480px;
+}
+
+.cover__subtitle {
+  margin: 32px 204px 0;
+}
+
+.footer {
+  margin-top: 88px;
+  margin-left: 24px;
+}
+
+.footer__copyright {
+  margin-right: 24px;
+  line-height: 16px;
+  font-size: 14px;
+}
+.footer_link {
+  margin-right: 18px;
+  line-height: 16px;
+  font-size: 14px;
+}
+
+.footer__copyright {
+  margin-right: 48px;
+  line-height: 14px;
+  font-size: 12px;
+}
+}
+
+@media all and (min-width: 320px) and (max-width: 540px) {
+
+.header__logo {
+  margin: 16px 16px 0 16px;
+}
+
+.header_ru {
+  line-height: 20px;
+  font-size: 18px;
+  margin-right: 18px;
+}
+
+.header_en {
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.lead {
+  margin: 48px 0 0 0;
+}
+
+.lead_title {
+  line-height: 44px;
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+.lead_subtitle {
+  line-height: 20px;
+  font-size: 16px;
+  margin: 16px auto 0;
+}
+
+.img_train {
+  margin-top: 40px;
+  height: 200px;
+}
+  
+.intro {
+  margin: 64px 16px 0;
+}
+
+.intro_title {
+  line-height: 35px;
+  font-size: 32px;
+}
+
+.photo-grid {
+  margin: 64px auto 0 auto;
+}
+
+.places {
+  margin: 64px 0 0 0;
+  width: 100%;
+}
+
+.place_2 {
+  margin-top: 50px;
+}
+
+.title {
+  align-self: start;
+}
+
+.place {
+  min-height: min-content;
+  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
+  grid-template-areas:
+  "title"
+  "url"
+  "imge"
+  "paragr"
+  "paragra";
+}
+
+.place_title {
+  line-height: 55px;
+  font-size: 52px;
+  margin-left: 16px;
+}
+
+.url {
+  align-self: start;
+  margin-left: 16px;
+}
+
+.place_img {
+  width: 100%; /* Занимает всю ширину ячейки */
+  height: 100%; /* Занимает всю высоту ячейки */
+  object-fit: cover; /* Сохраняет пропорции, обрезая лишнее */
+}
+
+.place_paragraph {
+  margin-left: 16px;
+  margin-right: 16px;
+  max-width: 100%; /* Ограничивает ширину текста */
+}
+
+.paragraph_1 {
+  margin: 32px 16px 0;
+}
+
+.paragraph_2 {
+  margin: 25px 16px 0;
+}
+
+.cover {
+  height: 200px;
+  margin: 66px 0 0 0 ;
+}
+
+.cover__title {
+  line-height: 45px;
+  font-size: 42px;
+}
+
+.cover__subtitle {
+  margin: 16px 16px 0;
+  line-height: 16px;
+  font-size: 14px;
+}
+
+.footer {
+  margin-top: 64px;
+  margin-left: 16px;
+  flex-direction: column;
+}
+
+.footer_link {
+  margin-right: 0;
+  line-height: 24px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column; /* Элементы располагаются вертикально */
+  margin-bottom: 32px;
+}
+
+.footer__copyright {
+  line-height: 14px;
+  font-size: 14px;
+  margin-top: 48px;
+  justify-content: flex-end;
+  flex-direction: column; /* Элементы располагаются вертикально */
+}
+
+.footer__copyright_margin {
+  margin-bottom: 0;
+}
+}
